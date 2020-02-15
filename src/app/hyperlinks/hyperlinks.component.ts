@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {HyperlinksService} from '../hyperlink/service/hyperlinks.service';
 import {Hyperlink} from '../hyperlink/model/hyperlink';
+import {Observable, Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-hyperlinks',
@@ -11,6 +12,8 @@ export class HyperlinksComponent implements OnInit {
 
   public hyperlinks: Hyperlink[];
 
+  public observable: Subscription;
+
   constructor(private hyperlinksService: HyperlinksService) { }
 
   ngOnInit(): void {
@@ -19,6 +22,10 @@ export class HyperlinksComponent implements OnInit {
         this.hyperlinks = next;
       }
     );
+  }
+
+  public href(url) {
+    document.location.href = url;
   }
 
 }

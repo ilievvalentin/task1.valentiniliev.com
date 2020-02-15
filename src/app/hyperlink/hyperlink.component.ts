@@ -10,9 +10,15 @@ export class HyperlinkComponent implements OnInit {
 
   @Input() public hyperlink: Hyperlink;
 
+  private url;
+
+  public favicon;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.url = new URL(this.hyperlink.link);
+    this.favicon = this.url.protocol + this.url.host + '/favicon.ico';
   }
 
 }

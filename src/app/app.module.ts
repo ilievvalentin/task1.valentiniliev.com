@@ -13,6 +13,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { HyperlinkComponent } from './hyperlink/hyperlink.component';
 import {MatCardModule} from '@angular/material/card';
 import {HttpClientModule} from '@angular/common/http';
+import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { AdminHyperlinkComponent } from './admin-hyperlink/admin-hyperlink.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import {HttpClientModule} from '@angular/common/http';
     IndexComponent,
     ToolbarComponent,
     HyperlinksComponent,
-    HyperlinkComponent
+    HyperlinkComponent,
+    AdminPanelComponent,
+    AdminHyperlinkComponent
   ],
   imports: [
     BrowserModule,
