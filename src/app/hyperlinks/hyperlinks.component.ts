@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {HyperlinksService} from '../hyperlink/service/hyperlinks.service';
+import {Hyperlink} from '../hyperlink/model/hyperlink';
 
 @Component({
   selector: 'app-hyperlinks',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HyperlinksComponent implements OnInit {
 
-  constructor() { }
+  public hyperlinks: Hyperlink[];
+
+  constructor(private hyperlinksService: HyperlinksService) { }
 
   ngOnInit(): void {
+    this.hyperlinksService.getHyperlinks().subscribe(
+      next => {
+        this.hyperlinks.push(next as Hyperlink);
+      }
+    );
   }
 
 }

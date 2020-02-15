@@ -1,5 +1,5 @@
-<mat-card class="card" style="background-color: #fddac2">
-  <mat-card-title>Hui</mat-card-title>
-  <mat-card-content>da</mat-card-content>
-  <mat-card-footer>balbal</mat-card-footer>
+<mat-card class="card" [ngStyle]="{'background-color': hyperlink.color}">
+  <mat-card-title>{{hyperlink.title}}</mat-card-title>
+  <mat-card-content>{{hyperlink.link}}</mat-card-content>
+  <mat-card-footer>{{hyperlink.createdAt}} {{hyperlink.updatedAt}}</mat-card-footer>
 </mat-card>

@@ -1,47 +1,7 @@
 <mat-grid-list cols="3" rowHeight="fit" class="mat-grid-list">
-  <mat-grid-tile>
+  <mat-grid-tile *ngFor="let hyperlink of hyperlinks">
     <button mat-button class="button">
-      <app-hyperlink class="app-hyperlink"></app-hyperlink>
-    </button>
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <button mat-button class="button">
-      <app-hyperlink class="app-hyperlink"></app-hyperlink>
-    </button>
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <button mat-button class="button">
-      <app-hyperlink class="app-hyperlink"></app-hyperlink>
-    </button>
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <button mat-button class="button">
-      <app-hyperlink class="app-hyperlink"></app-hyperlink>
-    </button>
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <button mat-button class="button">
-      <app-hyperlink class="app-hyperlink"></app-hyperlink>
-    </button>
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <button mat-button class="button">
-      <app-hyperlink class="app-hyperlink"></app-hyperlink>
-    </button>
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <button mat-button class="button">
-      <app-hyperlink class="app-hyperlink"></app-hyperlink>
-    </button>
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <button mat-button class="button">
-      <app-hyperlink class="app-hyperlink"></app-hyperlink>
-    </button>
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <button mat-button class="button">
-      <app-hyperlink class="app-hyperlink"></app-hyperlink>
+      <app-hyperlink class="app-hyperlink" [hyperlink]="hyperlink"></app-hyperlink>
     </button>
   </mat-grid-tile>
 </mat-grid-list>

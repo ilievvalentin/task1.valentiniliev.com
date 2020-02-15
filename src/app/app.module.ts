@@ -12,6 +12,7 @@ import { HyperlinksComponent } from './hyperlinks/hyperlinks.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { HyperlinkComponent } from './hyperlink/hyperlink.component';
 import {MatCardModule} from '@angular/material/card';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {MatCardModule} from '@angular/material/card';
     MatToolbarModule,
     MatButtonModule,
     MatGridListModule,
-    MatCardModule
+    MatCardModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

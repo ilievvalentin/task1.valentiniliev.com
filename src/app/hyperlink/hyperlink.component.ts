@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Hyperlink} from './model/hyperlink';
 
 @Component({
   selector: 'app-hyperlink',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hyperlink.component.css']
 })
 export class HyperlinkComponent implements OnInit {
+
+  @Input() public hyperlink: Hyperlink;
 
   constructor() { }
 
