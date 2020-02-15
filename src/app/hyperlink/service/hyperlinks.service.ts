@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {Hyperlink} from '../model/hyperlink';
 
 const url = 'https://api.task1.valentiniliev.com';
 
@@ -12,7 +13,7 @@ export class HyperlinksService {
   }
 
   public getHyperlinks() {
-    return this.httpClient.get(url  + '/hyperlinks');
+    return this.httpClient.get<Hyperlink[]>(url  + '/hyperlinks');
   }
 
 }

@@ -16,7 +16,7 @@ export class HyperlinksComponent implements OnInit {
   ngOnInit(): void {
     this.hyperlinksService.getHyperlinks().subscribe(
       next => {
-        this.hyperlinks.push(next as Hyperlink);
+        this.hyperlinks = next;
       }
     );
   }
