@@ -4,7 +4,7 @@ import {Hyperlink} from './hyperlink.model';
 
 const url = 'https://api.task1.valentiniliev.com/hyperlinks';
 
-const defaultHyperlink = new Hyperlink('', '', '', '', '', '');
+const defaultHyperlink = new Hyperlink('', 'https://task1.valentiniliev.com/admin-dashboard', 'Task1', '#ffffff', '', '');
 
 @Injectable({
   providedIn: 'root'
@@ -18,11 +18,12 @@ export class HyperlinkService {
     return this.httpClient.get(url);
   }
 
-  private edit(hyperlink: Hyperlink) {
+  public edit(hyperlink: Hyperlink) {
     return this.httpClient.patch(url + '/' + hyperlink.id, hyperlink);
   }
 
-  private delete() {
+  private delete(hyperlink: Hyperlink) {
+    defaultHyperlink.id = hyperlink.id;
     return this.edit(defaultHyperlink);
   }
 

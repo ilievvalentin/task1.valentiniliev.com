@@ -24,7 +24,11 @@ export class HyperlinkComponent implements OnInit {
   }
 
   public openEditDialog() {
-    const s = this.matDialog.open(EditDialogComponent, {});
+    const matDialogRef = this.matDialog.open(EditDialogComponent, {data: this.hyperlink});
+  }
+
+  public href(link) {
+    window.location.replace(link);
   }
 
 }

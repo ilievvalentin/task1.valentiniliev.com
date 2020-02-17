@@ -18,11 +18,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.subscription = this.hyperlinkService.getAll().subscribe(
-      next => this.hyperlinks = next as Hyperlink[],
-      error => console.error(error),
-      () => console.info('')
-    );
+    this.subscription = this.hyperlinkService.getAll().subscribe(next => this.hyperlinks = next as Hyperlink[]);
   }
 
   ngOnDestroy(): void {

@@ -5,8 +5,10 @@ export class Hyperlink {
     public link,
     public title,
     public color,
-    public createdAt,
-    public updatedAt
+    // tslint:disable-next-line:variable-name
+    public created_at,
+    // tslint:disable-next-line:variable-name
+    public updated_at
   ) {
   }
 

@@ -11,12 +11,12 @@ import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing.module';
 import {DashboardComponent} from './dashboard/dashboard.component';
-import { DeleteDialogComponent } from './dashboard/hyperlink/delete-dialog/delete-dialog.component';
-import { EditDialogComponent } from './dashboard/hyperlink/edit-dialog/edit-dialog.component';
+import {DeleteDialogComponent} from './dashboard/hyperlink/delete-dialog/delete-dialog.component';
+import {EditDialogComponent} from './dashboard/hyperlink/edit-dialog/edit-dialog.component';
 import {HyperlinkComponent} from './dashboard/hyperlink/hyperlink.component';
 import {ToolbarComponent} from './toolbar/toolbar.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
@@ -40,7 +40,8 @@ import {MatInputModule} from '@angular/material/input';
     MatToolbarModule,
     MatFormFieldModule,
     FormsModule,
-    MatInputModule
+    MatInputModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

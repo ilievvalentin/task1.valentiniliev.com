@@ -1,4 +1,4 @@
-<button class="button" mat-button [disabled]="router.url.endsWith('admin-dashboard')">
+<button (click)="href(hyperlink.link)" class="button" mat-button [disabled]="router.url.endsWith('admin-dashboard')">
   <mat-card [style.backgroundColor]="hyperlink.color" class="card">
     <mat-card-title>{{hyperlink.title}}</mat-card-title>
     <mat-card-subtitle>{{hyperlink.link}}</mat-card-subtitle>
@@ -7,6 +7,7 @@
       <button (click)="openEditDialog()" color="primary" mat-raised-button>Edit</button>
       <button color="warn" mat-raised-button>Delete</button>
     </mat-card-actions>
-    <mat-card-footer>{{hyperlink.createdAt}} hi {{hyperlink.updatedAt}}</mat-card-footer>
+    <mat-card-footer *ngIf="!router.url.endsWith('admin-dashboard')">Updated at: {{hyperlink.updated_at}}</mat-card-footer>
+    <mat-card-footer *ngIf="router.url.endsWith('admin-dashboard')">Id: {{hyperlink.id}}, Created at: {{hyperlink.created_at}}, Updated at: {{hyperlink.updated_at}}</mat-card-footer>
   </mat-card>
 </button>

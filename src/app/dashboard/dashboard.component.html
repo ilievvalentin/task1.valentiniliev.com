@@ -1,5 +1,5 @@
-<mat-grid-list cols="3" rowHeight="fit" class="mat-grid-list">
+<mat-grid-list class="mat-grid-list" cols="3" rowHeight="fit">
   <mat-grid-tile *ngFor="let hyperlink of hyperlinks">
-    <app-hyperlink class="app-hyperlink" style="width: 100%" [hyperlink]="hyperlink"></app-hyperlink>
+    <app-hyperlink [hyperlink]="hyperlink" class="app-hyperlink" style="width: 100%"></app-hyperlink>
   </mat-grid-tile>
 </mat-grid-list>

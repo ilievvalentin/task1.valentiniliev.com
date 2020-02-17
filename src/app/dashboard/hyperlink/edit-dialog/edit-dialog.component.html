@@ -1,1 +1,23 @@
-<h1 mat-dialog-title>kur</h1>
+<h1 mat-dialog-title>Edit {{hyperlink.title}}</h1>
+<form (ngSubmit)="submit()" [formGroup]="formGroup">
+  <mat-dialog-content>
+    <mat-form-field>
+      <mat-label>Link</mat-label>
+      <input formControlName="link" matInput type="url">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <mat-label>Title</mat-label>
+      <input formControlName="title" matInput type="text">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <mat-label>Color</mat-label>
+      <input formControlName="color" matInput type="color">
+    </mat-form-field>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button color="primary" mat-dialog-close mat-raised-button>Cancel</button>
+    <button [disabled]="formGroup.invalid" color="accent" mat-raised-button type="submit">Edit</button>
+  </mat-dialog-actions>
+</form>
