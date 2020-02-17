@@ -4,6 +4,8 @@ import {Hyperlink} from '../../shared/hyperlink.model';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {HyperlinkService} from '../../shared/hyperlink.service';
 import {Subscribable, Subscription} from 'rxjs';
+import {DashboardComponent} from '../../dashboard.component';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-edit-dialog',
@@ -15,7 +17,8 @@ export class EditDialogComponent implements OnInit, OnDestroy {
   constructor(
     private editDialogComponentMatDialogRef: MatDialogRef<EditDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public hyperlink: Hyperlink,
-    private hyperlinkService: HyperlinkService
+    private hyperlinkService: HyperlinkService,
+    private router: Router
   ) { }
 
   private subscribable: Subscription;
@@ -40,6 +43,7 @@ export class EditDialogComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.subscribable.unsubscribe();
+    window.location.reload();
   }
 
 }

@@ -22,7 +22,7 @@ export class HyperlinkService {
     return this.httpClient.patch(url + '/' + hyperlink.id, hyperlink);
   }
 
-  private delete(hyperlink: Hyperlink) {
+  public delete(hyperlink: Hyperlink) {
     defaultHyperlink.id = hyperlink.id;
     return this.edit(defaultHyperlink);
   }

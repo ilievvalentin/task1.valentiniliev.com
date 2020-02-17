@@ -3,6 +3,7 @@ import {Hyperlink} from '../shared/hyperlink.model';
 import {Router} from '@angular/router';
 import {MatDialog} from '@angular/material/dialog';
 import {EditDialogComponent} from './edit-dialog/edit-dialog.component';
+import {DeleteDialogComponent} from './delete-dialog/delete-dialog.component';
 
 @Component({
   selector: 'app-hyperlink',
@@ -24,7 +25,11 @@ export class HyperlinkComponent implements OnInit {
   }
 
   public openEditDialog() {
-    const matDialogRef = this.matDialog.open(EditDialogComponent, {data: this.hyperlink});
+    const editDialogComponentMatDialogRef = this.matDialog.open(EditDialogComponent, {data: this.hyperlink});
+  }
+
+  public openDeleteDialog() {
+    const deleteDialogComponentMatDialogRef = this.matDialog.open(DeleteDialogComponent, {data: this.hyperlink});
   }
 
   public href(link) {

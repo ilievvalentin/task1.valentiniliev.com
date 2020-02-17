@@ -5,7 +5,7 @@
     <img [src]="imgSrc" alt="" mat-card-sm-image>
     <mat-card-actions *ngIf="router.url.endsWith('admin-dashboard')">
       <button (click)="openEditDialog()" color="primary" mat-raised-button>Edit</button>
-      <button color="warn" mat-raised-button>Delete</button>
+      <button (click)="openDeleteDialog()" color="warn" mat-raised-button>Delete</button>
     </mat-card-actions>
     <mat-card-footer *ngIf="!router.url.endsWith('admin-dashboard')">Updated at: {{hyperlink.updated_at}}</mat-card-footer>
     <mat-card-footer *ngIf="router.url.endsWith('admin-dashboard')">Id: {{hyperlink.id}}, Created at: {{hyperlink.created_at}}, Updated at: {{hyperlink.updated_at}}</mat-card-footer>

@@ -1,1 +1,5 @@
-<p>delete-dialog works!</p>
+<h1 mat-dialog-title>Delete {{hyperlink.title}}</h1>
+<mat-dialog-actions>
+  <button color="primary" mat-dialog-close mat-raised-button>Cancel</button>
+  <button color="warn" mat-raised-button (click)="delete()">Delete</button>
+</mat-dialog-actions>
